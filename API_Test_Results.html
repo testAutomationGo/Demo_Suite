@@ -1,0 +1,880 @@
+
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .test-category {
+            margin-bottom: 20px;
+        }
+
+        .test-category h2 {
+            background-color: #f4f4f4;
+            padding: 10px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .test-case {
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .test-case h3 {
+            margin-top: 0;
+            cursor: pointer;
+        }
+
+        .test-details {
+            display: none;
+        }
+
+        .passed {
+            color: green;
+        }
+
+        .failed {
+            color: red;
+        }
+
+        .summary {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .not-run {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Results</h1>
+    <div class="summary">
+        <p>Total Tests: 12</p>
+        <p>Tests Ran: 12</p>
+        <p style="color: green">Tests Passed: 12</p>
+        <p style="color: red">Tests Failed: 0</p>
+        <p>Execution Date: 2026-03-24 19:44:56</p>
+        <p>Duration (seconds): 9223372036</p>
+        <p>Environment: N/A</p>
+        <div>Click on the Below Links to View The Results</div>
+    </div>
+
+    
+        
+    <div class="test-category">
+        <h2 onclick="toggleDetails('api')"
+            class=""
+            style="color: green">
+            api 
+        </h2>
+
+        <div id="api" style="display: none;">
+            
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_API0001')"
+            class="passed">
+            TC_API0001 - API Health Check (Passed)
+        </h3>
+
+        <div id="TC_API0001" class="test-details">
+            <p><strong>Description:</strong> This test case checks the health of the API by sending a GET request to the /health endpoint and verifying the response.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12345</a></p>
+            <p><strong>Pre-conditions:</strong> </p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Send a GET request to the /health endpoint.</td>
+                    <td>The API should respond with a status code of 200 and a body containing &#39;status: healthy&#39;.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify that the response status code is 200.</td>
+                    <td>The response status code should be 200.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify that the response body contains &#39;status: healthy&#39;.</td>
+                    <td>The response body should contain &#39;status: healthy&#39;.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The API should be healthy and respond correctly to the health check.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Health Response: {"auth_note":"Protected endpoints require header: X-API-Key","status":"healthy","timestamp":"2026-03-24T23:44:56Z","version":"1.0.0"}
+</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194456341</p>
+            <p><strong>End Time:</strong> 20260324194456346</p>
+            <p><strong>Time to Complete:</strong> 5</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> This test case is part of the API health check suite and should be executed regularly to ensure the API is functioning properly.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Health Endpoint Response Code: 200, Body: {&#34;auth_note&#34;:&#34;Protected endpoints require header: X-API-Key&#34;,&#34;status&#34;:&#34;healthy&#34;,&#34;timestamp&#34;:&#34;2026-03-24T23:44:56Z&#34;,&#34;version&#34;:&#34;1.0.0&#34;}</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_API0002')"
+            class="passed">
+            TC_API0002 - API Get Notes (Passed)
+        </h3>
+
+        <div id="TC_API0002" class="test-details">
+            <p><strong>Description:</strong> This test case verifies the GET /api/notes endpoint returns a 200 status with a data array and count.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12346</a></p>
+            <p><strong>Pre-conditions:</strong> The API must be running and a valid API key must be available.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Send a GET request to the /api/notes endpoint with a valid API key.</td>
+                    <td>The API should respond with a status code of 200.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify that the response status code is 200.</td>
+                    <td>The response status code should be 200.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify that the response body contains a data array and count field.</td>
+                    <td>The response body should contain &#39;data&#39; and &#39;count&#39;.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The notes endpoint returns a 200 response with a JSON object containing data and count.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Get Notes Response: {"count":67,"data":[{"id":129,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:44:33Z","updated_at":"2026-03-24T23:44:34Z"},{"id":130,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:44:34Z","updated_at":"2026-03-24T23:44:34Z"},{"id":126,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:44:11Z","updated_at":"2026-03-24T23:44:11Z"},{"id":127,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:44:11Z","updated_at":"2026-03-24T23:44:11Z"},{"id":124,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:26:13Z","updated_at":"2026-03-24T23:26:13Z"},{"id":121,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:25:40Z","updated_at":"2026-03-24T23:25:40Z"},{"id":122,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:25:40Z","updated_at":"2026-03-24T23:25:40Z"},{"id":118,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:25:14Z","updated_at":"2026-03-24T23:25:14Z"},{"id":116,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:23:33Z","updated_at":"2026-03-24T23:23:33Z"},{"id":115,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:23:32Z","updated_at":"2026-03-24T23:23:32Z"},{"id":112,"title":"Test Note","content":"Test note content","created_at":"2026-03-24T23:22:24Z","updated_at":"2026-03-24T23:22:24Z"},{"id":113,"title":"Updated Note Title","content":"Updated content","created_at":"2026-03-24T23:22:24Z","updated_at":"2026-03-24T23:22:24Z"},{"id":110,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:22:12Z","updated_at":"2026-03-24T23:22:12Z"},{"id":111,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:22:12Z","updated_at":"2026-03-24T23:22:12Z"},{"id":108,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:21:35Z","updated_at":"2026-03-24T23:21:36Z"},{"id":106,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:21:16Z","updated_at":"2026-03-24T23:21:16Z"},{"id":104,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:21:14Z","updated_at":"2026-03-24T23:21:15Z"},{"id":103,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:20:48Z","updated_at":"2026-03-24T23:20:48Z"},{"id":100,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:18:40Z","updated_at":"2026-03-24T23:18:40Z"},{"id":99,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:18:39Z","updated_at":"2026-03-24T23:18:39Z"},{"id":96,"title":"Test Note","content":"Test note content","created_at":"2026-03-24T23:17:24Z","updated_at":"2026-03-24T23:17:24Z"},{"id":97,"title":"Updated Note Title","content":"Updated content","created_at":"2026-03-24T23:17:24Z","updated_at":"2026-03-24T23:17:24Z"},{"id":95,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:17:14Z","updated_at":"2026-03-24T23:17:14Z"},{"id":93,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:17:13Z","updated_at":"2026-03-24T23:17:13Z"},{"id":92,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:16:34Z","updated_at":"2026-03-24T23:16:34Z"},{"id":90,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:14:28Z","updated_at":"2026-03-24T23:14:28Z"},{"id":88,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:13:49Z","updated_at":"2026-03-24T23:13:49Z"},{"id":86,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:13:25Z","updated_at":"2026-03-24T23:13:25Z"},{"id":87,"title":"Edit Test TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:13:25Z","updated_at":"2026-03-24T23:13:25Z"},{"id":83,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:12:32Z","updated_at":"2026-03-24T23:12:32Z"},{"id":82,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:12:31Z","updated_at":"2026-03-24T23:12:31Z"},{"id":81,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:11:32Z","updated_at":"2026-03-24T23:11:32Z"},{"id":79,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:10:58Z","updated_at":"2026-03-24T23:11:31Z"},{"id":78,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:10:57Z","updated_at":"2026-03-24T23:10:57Z"},{"id":74,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:09:30Z","updated_at":"2026-03-24T23:09:30Z"},{"id":75,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:09:30Z","updated_at":"2026-03-24T23:09:30Z"},{"id":73,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:08:48Z","updated_at":"2026-03-24T23:08:48Z"},{"id":72,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:08:47Z","updated_at":"2026-03-24T23:08:47Z"},{"id":70,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:08:10Z","updated_at":"2026-03-24T23:08:11Z"},{"id":68,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:08:10Z","updated_at":"2026-03-24T23:08:10Z"},{"id":69,"title":"Delete Test TC_UI0010_20260324190810653","content":"Content to be deleted","created_at":"2026-03-24T23:08:10Z","updated_at":"2026-03-24T23:08:10Z"},{"id":66,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:07:41Z","updated_at":"2026-03-24T23:07:41Z"},{"id":67,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:07:41Z","updated_at":"2026-03-24T23:07:41Z"},{"id":62,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:07:09Z","updated_at":"2026-03-24T23:07:09Z"},{"id":64,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:07:09Z","updated_at":"2026-03-24T23:07:09Z"},{"id":60,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T23:06:37Z","updated_at":"2026-03-24T23:06:37Z"},{"id":61,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T23:06:37Z","updated_at":"2026-03-24T23:06:37Z"},{"id":55,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T22:58:30Z","updated_at":"2026-03-24T22:58:50Z"},{"id":57,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T22:58:49Z","updated_at":"2026-03-24T22:58:49Z"},{"id":54,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T22:58:30Z","updated_at":"2026-03-24T22:58:30Z"},{"id":51,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T22:57:46Z","updated_at":"2026-03-24T22:57:46Z"},{"id":52,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T22:57:46Z","updated_at":"2026-03-24T22:57:46Z"},{"id":49,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T22:57:31Z","updated_at":"2026-03-24T22:57:32Z"},{"id":48,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T22:57:31Z","updated_at":"2026-03-24T22:57:31Z"},{"id":45,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T22:56:40Z","updated_at":"2026-03-24T22:56:40Z"},{"id":46,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T22:56:40Z","updated_at":"2026-03-24T22:56:40Z"},{"id":42,"title":"Test Note","content":"Test note content","created_at":"2026-03-24T22:44:46Z","updated_at":"2026-03-24T22:44:46Z"},{"id":43,"title":"Updated Note Title","content":"Updated content","created_at":"2026-03-24T22:44:46Z","updated_at":"2026-03-24T22:44:46Z"},{"id":39,"title":"Test Note","content":"Test note content","created_at":"2026-03-24T22:44:29Z","updated_at":"2026-03-24T22:44:29Z"},{"id":40,"title":"Updated Note Title","content":"Updated content","created_at":"2026-03-24T22:44:29Z","updated_at":"2026-03-24T22:44:29Z"},{"id":38,"title":"Edited TC_UI0009","content":"Content to be edited","created_at":"2026-03-24T22:41:50Z","updated_at":"2026-03-24T22:41:50Z"},{"id":31,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T21:43:07Z","updated_at":"2026-03-24T21:43:07Z"},{"id":5,"title":"Edited TC_UI0009","content":"Lets Test Some Notes!","created_at":"2026-03-23T11:02:57Z","updated_at":"2026-03-24T18:34:13Z"},{"id":29,"title":"UI Test Note TC_UI0008","content":"Automated test content for TC_UI0008","created_at":"2026-03-24T18:34:13Z","updated_at":"2026-03-24T18:34:13Z"},{"id":1,"title":"Welcome to DemoApp!","content":"This is your first note. Click Edit to modify it, or Delete to remove it. Use the form above to add more notes!","created_at":"2026-03-23T10:54:15Z","updated_at":"2026-03-23T10:54:15Z"},{"id":2,"title":"Shopping List","content":"- Milk\n- Eggs\n- Bread\n- Coffee\n- Butter","created_at":"2026-03-23T10:54:15Z","updated_at":"2026-03-23T10:54:15Z"},{"id":3,"title":"Q1 Planning Notes","content":"Key objectives:\n1. Launch new feature set\n2. Improve test coverage to 80%\n3. Reduce load time by 30%\n4. Onboard 3 new team members","created_at":"2026-03-23T10:54:15Z","updated_at":"2026-03-23T10:54:15Z"}]}
+</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194456346</p>
+            <p><strong>End Time:</strong> 20260324194456347</p>
+            <p><strong>Time to Complete:</strong> 1</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> Requires X-API-Key header authentication.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Get Notes Response Code: 200, Body: {&#34;count&#34;:67,&#34;data&#34;:[{&#34;id&#34;:129,&#34;title&#34;:&#34;Edited TC_UI0009&#34;,&#34;content&#34;:&#34;Content to be edited&#34;,&#34;created_at&#34;:&#34;2026-03-24T23:44:33Z&#34;,&#34;updated_at&#34;:&#34;2026-03-24T23:44:34Z&#34;},{&#34;id&#34;:130,&#34;title&#34;:&#34;UI Test Note TC_UI0008&#34;,&#34;content&#34;:&#34;Automated test content for TC_UI0008&#34;,&#34;created_at&#34;:&#34;2026-03-24T23:44:34Z&#34;,&#34;updated_at&#34;:&#34;2026-03-24T23:44:34Z&#34;},{&#34;id&#34;:126,&#34;title&#34;:&#34;UI Test Note TC_UI0008&#34;,&#34;content&#34;:&#34;Automated test content for TC_UI0008&#34;,&#34;created_at&#34;:&#34;2026-03-24T23:44:1...</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_API0003')"
+            class="passed">
+            TC_API0003 - API Create Note (Passed)
+        </h3>
+
+        <div id="TC_API0003" class="test-details">
+            <p><strong>Description:</strong> This test case verifies the POST /api/notes endpoint creates a new note and returns a 201 status.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12347</a></p>
+            <p><strong>Pre-conditions:</strong> The API must be running and a valid API key must be available.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Send a POST request to /api/notes with a JSON body containing title and content fields.</td>
+                    <td>The API should respond with a status code of 201.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify that the response status code is 201.</td>
+                    <td>The response status code should be 201.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the response body contains the created note with an assigned ID.</td>
+                    <td>The response body should contain the new note object with an id field.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> A new note is created and the API returns 201 with the note object.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Create Note Response: {"id":131,"title":"Test Note","content":"Test note content","created_at":"2026-03-24T23:44:56Z","updated_at":"2026-03-24T23:44:56Z"}
+</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194456347</p>
+            <p><strong>End Time:</strong> 20260324194456349</p>
+            <p><strong>Time to Complete:</strong> 2</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> Requires X-API-Key header authentication.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Create Note Response Code: 201, Body: {&#34;id&#34;:131,&#34;title&#34;:&#34;Test Note&#34;,&#34;content&#34;:&#34;Test note content&#34;,&#34;created_at&#34;:&#34;2026-03-24T23:44:56Z&#34;,&#34;updated_at&#34;:&#34;2026-03-24T23:44:56Z&#34;}</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_API0004')"
+            class="passed">
+            TC_API0004 - API Update Note (Passed)
+        </h3>
+
+        <div id="TC_API0004" class="test-details">
+            <p><strong>Description:</strong> This test case verifies the PUT /api/notes/{id} endpoint updates an existing note and returns a 200 status.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12348</a></p>
+            <p><strong>Pre-conditions:</strong> The API must be running and a valid API key must be available.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Send a POST request to /api/notes to create a note and retrieve its ID.</td>
+                    <td>A note is created with status 201 and the response contains an id.</td>
+                </tr>
+                
+                <tr>
+                    <td>Send a PUT request to /api/notes/{id} with updated title and content.</td>
+                    <td>The API should respond with a status code of 200.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify that the response status code is 200 and the note reflects the updated values.</td>
+                    <td>The response status code should be 200 with the updated note object.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The note is updated and the API returns 200 with the updated note object.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Update Note Response: {"id":132,"title":"Updated Note Title","content":"Updated content","created_at":"2026-03-24T23:44:56Z","updated_at":"2026-03-24T23:44:56Z"}
+</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194456349</p>
+            <p><strong>End Time:</strong> 20260324194456354</p>
+            <p><strong>Time to Complete:</strong> 5</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> Creates a note first to obtain a valid ID, then performs the update.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Create Note (setup) Response Code: 201, Body: {&#34;id&#34;:132,&#34;title&#34;:&#34;Note for Update&#34;,&#34;content&#34;:&#34;Original content&#34;,&#34;created_at&#34;:&#34;2026-03-24T23:44:56Z&#34;,&#34;updated_at&#34;:&#34;2026-03-24T23:44:56Z&#34;}</li>
+                    
+                        <li>Update Note Response Code: 200, Body: {&#34;id&#34;:132,&#34;title&#34;:&#34;Updated Note Title&#34;,&#34;content&#34;:&#34;Updated content&#34;,&#34;created_at&#34;:&#34;2026-03-24T23:44:56Z&#34;,&#34;updated_at&#34;:&#34;2026-03-24T23:44:56Z&#34;}</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_API0005')"
+            class="passed">
+            TC_API0005 - API Delete Note (Passed)
+        </h3>
+
+        <div id="TC_API0005" class="test-details">
+            <p><strong>Description:</strong> This test case verifies the DELETE /api/notes/{id} endpoint deletes an existing note and returns a 200 status.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12349</a></p>
+            <p><strong>Pre-conditions:</strong> The API must be running and a valid API key must be available.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Send a POST request to /api/notes to create a note and retrieve its ID.</td>
+                    <td>A note is created with status 201 and the response contains an id.</td>
+                </tr>
+                
+                <tr>
+                    <td>Send a DELETE request to /api/notes/{id} using the created note&#39;s ID.</td>
+                    <td>The API should respond with a status code of 200.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify that the response status code is 200 and the message confirms deletion.</td>
+                    <td>The response status code should be 200 with a success message.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The note is deleted and the API returns 200 with a deletion confirmation message.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Delete Note Response: {"message":"Note deleted successfully"}
+</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194456354</p>
+            <p><strong>End Time:</strong> 20260324194456358</p>
+            <p><strong>Time to Complete:</strong> 4</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> Creates a note first to obtain a valid ID, then deletes it.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Create Note (setup) Response Code: 201, Body: {&#34;id&#34;:133,&#34;title&#34;:&#34;Note to Delete&#34;,&#34;content&#34;:&#34;This note will be deleted&#34;,&#34;created_at&#34;:&#34;2026-03-24T23:44:56Z&#34;,&#34;updated_at&#34;:&#34;2026-03-24T23:44:56Z&#34;}</li>
+                    
+                        <li>Delete Note Response Code: 200, Body: {&#34;message&#34;:&#34;Note deleted successfully&#34;}</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_API0006')"
+            class="passed">
+            TC_API0006 - API Get Messages (Passed)
+        </h3>
+
+        <div id="TC_API0006" class="test-details">
+            <p><strong>Description:</strong> This test case verifies the GET /api/messages endpoint returns a 200 status with a data array and count.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12350</a></p>
+            <p><strong>Pre-conditions:</strong> The API must be running and a valid API key must be available.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Send a GET request to the /api/messages endpoint with a valid API key.</td>
+                    <td>The API should respond with a status code of 200.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify that the response status code is 200.</td>
+                    <td>The response status code should be 200.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify that the response body contains a data array and count field.</td>
+                    <td>The response body should contain &#39;data&#39; and &#39;count&#39;.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The messages endpoint returns a 200 response with a JSON object containing data and count.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Get Messages Response: {"count":89,"data":[{"id":134,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T23:44:35Z"},{"id":133,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":true,"sent_at":"2026-03-24T23:44:34Z"},{"id":130,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T23:44:11Z"},{"id":131,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T23:44:11Z"},{"id":128,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":true,"sent_at":"2026-03-24T23:26:13Z"},{"id":125,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T23:25:40Z"},{"id":126,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T23:25:40Z"},{"id":122,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T23:25:14Z"},{"id":120,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":true,"sent_at":"2026-03-24T23:23:42Z"},{"id":119,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":true,"sent_at":"2026-03-24T23:23:40Z"},{"id":117,"from_email":"demo@demoapp.com","to_email":"recipient@test.com","subject":"Test Subject","body":"Test message body","is_read":false,"sent_at":"2026-03-24T23:22:24Z"},{"id":115,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":true,"sent_at":"2026-03-24T23:22:12Z"},{"id":116,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T23:22:12Z"},{"id":112,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T23:21:36Z"},{"id":113,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T23:21:36Z"},{"id":109,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":true,"sent_at":"2026-03-24T23:21:15Z"},{"id":110,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T23:21:15Z"},{"id":107,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T23:20:48Z"},{"id":105,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":true,"sent_at":"2026-03-24T23:20:47Z"},{"id":103,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T23:19:19Z"},{"id":102,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T23:18:47Z"},{"id":100,"from_email":"demo@demoapp.com","to_email":"recipient@test.com","subject":"Test Subject","body":"Test message body","is_read":false,"sent_at":"2026-03-24T23:17:24Z"},{"id":99,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":true,"sent_at":"2026-03-24T23:17:15Z"},{"id":97,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T23:17:13Z"},{"id":96,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Delete Test TC_UI0016","body":"Automated test message for TC_UI0016","is_read":false,"sent_at":"2026-03-24T23:16:34Z"},{"id":94,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T23:14:28Z"},{"id":92,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":true,"sent_at":"2026-03-24T23:13:49Z"},{"id":89,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Delete Test TC_UI0016","body":"Automated test message for TC_UI0016","is_read":false,"sent_at":"2026-03-24T23:13:25Z"},{"id":90,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T23:13:25Z"},{"id":86,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T23:12:32Z"},{"id":87,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T23:12:32Z"},{"id":84,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":true,"sent_at":"2026-03-24T23:12:02Z"},{"id":82,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T23:11:32Z"},{"id":83,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Delete Test TC_UI0016","body":"Automated test message for TC_UI0016","is_read":false,"sent_at":"2026-03-24T23:11:32Z"},{"id":79,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T23:10:58Z"},{"id":80,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Delete Test TC_UI0016","body":"Automated test message for TC_UI0016","is_read":false,"sent_at":"2026-03-24T23:10:58Z"},{"id":76,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":true,"sent_at":"2026-03-24T23:09:29Z"},{"id":73,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":true,"sent_at":"2026-03-24T23:08:48Z"},{"id":74,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Delete Test TC_UI0016","body":"Automated test message for TC_UI0016","is_read":false,"sent_at":"2026-03-24T23:08:48Z"},{"id":75,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T23:08:48Z"},{"id":72,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T23:08:10Z"},{"id":69,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Delete Test TC_UI0016","body":"Automated test message for TC_UI0016","is_read":false,"sent_at":"2026-03-24T23:07:41Z"},{"id":70,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T23:07:41Z"},{"id":66,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T23:07:09Z"},{"id":67,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T23:07:09Z"},{"id":63,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T23:06:37Z"},{"id":64,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T23:06:37Z"},{"id":60,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":true,"sent_at":"2026-03-24T23:06:03Z"},{"id":61,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T23:06:03Z"},{"id":59,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Delete Test TC_UI0016","body":"Automated test message for TC_UI0016","is_read":false,"sent_at":"2026-03-24T22:58:49Z"},{"id":56,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Delete Test TC_UI0016","body":"Automated test message for TC_UI0016","is_read":false,"sent_at":"2026-03-24T22:58:31Z"},{"id":54,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":true,"sent_at":"2026-03-24T22:58:30Z"},{"id":52,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T22:57:46Z"},{"id":53,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T22:57:46Z"},{"id":50,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T22:57:31Z"},{"id":47,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":true,"sent_at":"2026-03-24T22:56:40Z"},{"id":48,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T22:56:40Z"},{"id":41,"from_email":"demo@demoapp.com","to_email":"recipient@test.com","subject":"Test Subject","body":"Test message body","is_read":false,"sent_at":"2026-03-24T22:44:46Z"},{"id":40,"from_email":"demo@demoapp.com","to_email":"recipient@test.com","subject":"Message to Delete","body":"This message will be deleted","is_read":false,"sent_at":"2026-03-24T22:44:39Z"},{"id":38,"from_email":"demo@demoapp.com","to_email":"recipient@test.com","subject":"Test Subject","body":"Test message body","is_read":false,"sent_at":"2026-03-24T22:44:29Z"},{"id":37,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Delete Test TC_UI0016","body":"Automated test message for TC_UI0016","is_read":false,"sent_at":"2026-03-24T22:42:53Z"},{"id":36,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Delete Test TC_UI0016","body":"Automated test message for TC_UI0016","is_read":false,"sent_at":"2026-03-24T22:42:04Z"},{"id":34,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":true,"sent_at":"2026-03-24T22:41:50Z"},{"id":35,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T22:41:50Z"},{"id":32,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Delete Test TC_UI0016","body":"Automated test message for TC_UI0016","is_read":false,"sent_at":"2026-03-24T22:41:19Z"},{"id":26,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Delete Test TC_UI0016","body":"Automated test message for TC_UI0016","is_read":false,"sent_at":"2026-03-24T22:34:35Z"},{"id":25,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Delete Test TC_UI0016","body":"Automated test message for TC_UI0016","is_read":false,"sent_at":"2026-03-24T22:31:49Z"},{"id":24,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T22:31:40Z"},{"id":23,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":true,"sent_at":"2026-03-24T22:31:30Z"},{"id":22,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":true,"sent_at":"2026-03-24T22:31:16Z"},{"id":21,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T22:30:11Z"},{"id":20,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T22:26:56Z"},{"id":19,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T22:25:45Z"},{"id":18,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T22:12:51Z"},{"id":17,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T22:11:30Z"},{"id":16,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T22:09:21Z"},{"id":15,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T22:07:40Z"},{"id":14,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T22:03:31Z"},{"id":13,"from_email":"demo@demoapp.com","to_email":"mcrae2k79@gmail.com","subject":"test message","body":"send this message","is_read":false,"sent_at":"2026-03-24T22:00:27Z"},{"id":12,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T22:00:00Z"},{"id":11,"from_email":"demo@demoapp.com","to_email":"recipient@test.com","subject":"Test Subject","body":"Test message body","is_read":false,"sent_at":"2026-03-24T21:47:26Z"},{"id":10,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Send Test TC_UI0015","body":"Automated test message for TC_UI0015","is_read":false,"sent_at":"2026-03-24T21:43:34Z"},{"id":9,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Read Test TC_UI0014","body":"Automated test message for TC_UI0014","is_read":false,"sent_at":"2026-03-24T21:43:28Z"},{"id":8,"from_email":"demo@demoapp.com","to_email":"demo@demoapp.com","subject":"Delete Test TC_UI0016","body":"Automated test message for TC_UI0016","is_read":false,"sent_at":"2026-03-24T21:43:02Z"},{"id":6,"from_email":"demo@demoapp.com","to_email":"recipient@test.com","subject":"Test Subject","body":"Test message body","is_read":false,"sent_at":"2026-03-24T12:00:48Z"},{"id":4,"from_email":"demo@demoapp.com","to_email":"recipient@test.com","subject":"Test Subject","body":"Test message body","is_read":false,"sent_at":"2026-03-24T11:56:59Z"},{"id":1,"from_email":"alice@example.com","to_email":"demo@demoapp.com","subject":"Welcome to DemoApp!","body":"Hey there!\n\nWelcome to DemoApp. This is a sample message in your inbox. Feel free to reply or delete it.\n\nCheers,\nAlice","is_read":false,"sent_at":"2026-03-23T10:54:15Z"},{"id":2,"from_email":"bob@devteam.com","to_email":"demo@demoapp.com","subject":"Sprint Review Tomorrow","body":"Hi,\n\nJust a reminder that our sprint review is tomorrow at 3 PM in Conference Room B. Please have your demos ready.\n\nThanks,\nBob","is_read":false,"sent_at":"2026-03-23T10:54:15Z"},{"id":3,"from_email":"demo@demoapp.com","to_email":"charlie@example.com","subject":"Project Update","body":"Hi Charlie,\n\nThe project is on track for Q1 delivery. All major milestones have been hit. Let me know if you need anything.\n\nBest,\nDemo User","is_read":true,"sent_at":"2026-03-23T10:54:15Z"}]}
+</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194456358</p>
+            <p><strong>End Time:</strong> 20260324194456358</p>
+            <p><strong>Time to Complete:</strong> 0</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> Requires X-API-Key header authentication.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Get Messages Response Code: 200, Body: {&#34;count&#34;:89,&#34;data&#34;:[{&#34;id&#34;:134,&#34;from_email&#34;:&#34;demo@demoapp.com&#34;,&#34;to_email&#34;:&#34;demo@demoapp.com&#34;,&#34;subject&#34;:&#34;Send Test TC_UI0015&#34;,&#34;body&#34;:&#34;Automated test message for TC_UI0015&#34;,&#34;is_read&#34;:false,&#34;sent_at&#34;:&#34;2026-03-24T23:44:35Z&#34;},{&#34;id&#34;:133,&#34;from_email&#34;:&#34;demo@demoapp.com&#34;,&#34;to_email&#34;:&#34;demo@demoapp.com&#34;,&#34;subject&#34;:&#34;Read Test TC_UI0014&#34;,&#34;body&#34;:&#34;Automated test message for TC_UI0014&#34;,&#34;is_read&#34;:true,&#34;sent_at&#34;:&#34;2026-03-24T23:44:34Z&#34;},{&#34;id&#34;:130,&#34;from_email&#34;:&#34;demo@d...</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_API0007')"
+            class="passed">
+            TC_API0007 - API Send Message (Passed)
+        </h3>
+
+        <div id="TC_API0007" class="test-details">
+            <p><strong>Description:</strong> This test case verifies the POST /api/messages endpoint sends a new message and returns a 201 status.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12351</a></p>
+            <p><strong>Pre-conditions:</strong> The API must be running and a valid API key must be available.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Send a POST request to /api/messages with a JSON body containing to, subject, and body fields.</td>
+                    <td>The API should respond with a status code of 201.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify that the response status code is 201.</td>
+                    <td>The response status code should be 201.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the response body contains the created message with an assigned ID.</td>
+                    <td>The response body should contain the new message object with an id field.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> A new message is sent and the API returns 201 with the message object.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Send Message Response: {"id":135,"from_email":"demo@demoapp.com","to_email":"recipient@test.com","subject":"Test Subject","body":"Test message body","is_read":false,"sent_at":"2026-03-24T23:44:56Z"}
+</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194456358</p>
+            <p><strong>End Time:</strong> 20260324194456361</p>
+            <p><strong>Time to Complete:</strong> 3</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> Requires X-API-Key header authentication.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Send Message Response Code: 201, Body: {&#34;id&#34;:135,&#34;from_email&#34;:&#34;demo@demoapp.com&#34;,&#34;to_email&#34;:&#34;recipient@test.com&#34;,&#34;subject&#34;:&#34;Test Subject&#34;,&#34;body&#34;:&#34;Test message body&#34;,&#34;is_read&#34;:false,&#34;sent_at&#34;:&#34;2026-03-24T23:44:56Z&#34;}</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_API0008')"
+            class="passed">
+            TC_API0008 - API Delete Message (Passed)
+        </h3>
+
+        <div id="TC_API0008" class="test-details">
+            <p><strong>Description:</strong> This test case verifies the DELETE /api/messages/{id} endpoint deletes an existing message and returns a 200 status.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12352</a></p>
+            <p><strong>Pre-conditions:</strong> The API must be running and a valid API key must be available.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Send a POST request to /api/messages to create a message and retrieve its ID.</td>
+                    <td>A message is created with status 201 and the response contains an id.</td>
+                </tr>
+                
+                <tr>
+                    <td>Send a DELETE request to /api/messages/{id} using the created message&#39;s ID.</td>
+                    <td>The API should respond with a status code of 200.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify that the response status code is 200 and the message confirms deletion.</td>
+                    <td>The response status code should be 200 with a success message.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The message is deleted and the API returns 200 with a deletion confirmation.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Delete Message Response: {"message":"Message deleted successfully"}
+</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194456361</p>
+            <p><strong>End Time:</strong> 20260324194456365</p>
+            <p><strong>Time to Complete:</strong> 4</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> Creates a message first to obtain a valid ID, then deletes it.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Create Message (setup) Response Code: 201, Body: {&#34;id&#34;:136,&#34;from_email&#34;:&#34;demo@demoapp.com&#34;,&#34;to_email&#34;:&#34;recipient@test.com&#34;,&#34;subject&#34;:&#34;Message to Delete&#34;,&#34;body&#34;:&#34;This message will be deleted&#34;,&#34;is_read&#34;:false,&#34;sent_at&#34;:&#34;2026-03-24T23:44:56Z&#34;}</li>
+                    
+                        <li>Delete Message Response Code: 200, Body: {&#34;message&#34;:&#34;Message deleted successfully&#34;}</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_API0009')"
+            class="passed">
+            TC_API0009 - API Get Appointments (Passed)
+        </h3>
+
+        <div id="TC_API0009" class="test-details">
+            <p><strong>Description:</strong> This test case verifies the GET /api/appointments endpoint returns a 200 status with a data array and count.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12353</a></p>
+            <p><strong>Pre-conditions:</strong> The API must be running and a valid API key must be available.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Send a GET request to the /api/appointments endpoint with a valid API key.</td>
+                    <td>The API should respond with a status code of 200.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify that the response status code is 200.</td>
+                    <td>The response status code should be 200.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify that the response body contains a data array and count field.</td>
+                    <td>The response body should contain &#39;data&#39; and &#39;count&#39;.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The appointments endpoint returns a 200 response with a JSON object containing data and count.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Get Appointments Response: {"count":44,"data":[{"id":1,"title":"Daily Standup","description":"Team sync — what did we do, what will we do, blockers?","location":"Conference Room A","date":"2026-03-23","time":"09:00","created_at":"2026-03-23T10:54:15Z"},{"id":19,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T22:55:55Z"},{"id":22,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T22:56:39Z"},{"id":25,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T22:57:46Z"},{"id":26,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T22:58:31Z"},{"id":28,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T22:58:49Z"},{"id":31,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T23:06:36Z"},{"id":34,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T23:08:10Z"},{"id":36,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T23:08:48Z"},{"id":38,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T23:09:30Z"},{"id":41,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T23:10:57Z"},{"id":43,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T23:11:31Z"},{"id":44,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T23:12:32Z"},{"id":47,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T23:13:25Z"},{"id":48,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T23:13:49Z"},{"id":50,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T23:14:28Z"},{"id":53,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T23:17:14Z"},{"id":57,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T23:19:26Z"},{"id":59,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T23:20:47Z"},{"id":62,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T23:21:15Z"},{"id":64,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T23:21:35Z"},{"id":69,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T23:23:49Z"},{"id":72,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T23:25:13Z"},{"id":73,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T23:25:40Z"},{"id":74,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T23:26:12Z"},{"id":77,"title":"Create Appt TC_UI0020","description":"","location":"","date":"2026-03-24","time":"09:00","created_at":"2026-03-24T23:44:34Z"},{"id":35,"title":"Delete Appt TC_UI0021_20260324190810623","description":"","location":"","date":"2026-03-24","time":"10:00","created_at":"2026-03-24T23:08:10Z"},{"id":63,"title":"Delete Appt TC_UI0021_20260324192134942","description":"","location":"","date":"2026-03-24","time":"10:00","created_at":"2026-03-24T23:21:35Z"},{"id":2,"title":"Lunch with Client","description":"Discuss Q2 roadmap and feature requests","location":"The Grand Restaurant","date":"2026-03-25","time":"12:30","created_at":"2026-03-23T10:54:15Z"},{"id":3,"title":"Sprint Review","description":"End-of-sprint demo to stakeholders","location":"Main Hall / Zoom","date":"2026-03-28","time":"15:00","created_at":"2026-03-23T10:54:15Z"},{"id":4,"title":"1:1 with Manager","description":"Monthly performance check-in","location":"Manager's Office","date":"2026-03-30","time":"10:00","created_at":"2026-03-23T10:54:15Z"},{"id":5,"title":"Test Appointment","description":"Test appointment description","location":"Test Room","date":"2026-04-01","time":"10:00","created_at":"2026-03-24T11:56:59Z"},{"id":8,"title":"Test Appointment","description":"Test appointment description","location":"Test Room","date":"2026-04-01","time":"10:00","created_at":"2026-03-24T12:00:48Z"},{"id":12,"title":"Test Appointment","description":"Test appointment description","location":"Test Room","date":"2026-04-01","time":"10:00","created_at":"2026-03-24T22:44:29Z"},{"id":15,"title":"Test Appointment","description":"Test appointment description","location":"Test Room","date":"2026-04-01","time":"10:00","created_at":"2026-03-24T22:44:39Z"},{"id":16,"title":"Test Appointment","description":"Test appointment description","location":"Test Room","date":"2026-04-01","time":"10:00","created_at":"2026-03-24T22:44:46Z"},{"id":54,"title":"Test Appointment","description":"Test appointment description","location":"Test Room","date":"2026-04-01","time":"10:00","created_at":"2026-03-24T23:17:24Z"},{"id":66,"title":"Test Appointment","description":"Test appointment description","location":"Test Room","date":"2026-04-01","time":"10:00","created_at":"2026-03-24T23:22:24Z"},{"id":6,"title":"Updated Appointment","description":"Updated description","location":"Updated Room","date":"2026-04-02","time":"14:00","created_at":"2026-03-24T11:56:59Z"},{"id":9,"title":"Updated Appointment","description":"Updated description","location":"Updated Room","date":"2026-04-02","time":"14:00","created_at":"2026-03-24T12:00:48Z"},{"id":13,"title":"Updated Appointment","description":"Updated description","location":"Updated Room","date":"2026-04-02","time":"14:00","created_at":"2026-03-24T22:44:29Z"},{"id":17,"title":"Updated Appointment","description":"Updated description","location":"Updated Room","date":"2026-04-02","time":"14:00","created_at":"2026-03-24T22:44:46Z"},{"id":55,"title":"Updated Appointment","description":"Updated description","location":"Updated Room","date":"2026-04-02","time":"14:00","created_at":"2026-03-24T23:17:24Z"},{"id":67,"title":"Updated Appointment","description":"Updated description","location":"Updated Room","date":"2026-04-02","time":"14:00","created_at":"2026-03-24T23:22:24Z"}]}
+</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194456365</p>
+            <p><strong>End Time:</strong> 20260324194456365</p>
+            <p><strong>Time to Complete:</strong> 0</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> Requires X-API-Key header authentication.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Get Appointments Response Code: 200, Body: {&#34;count&#34;:44,&#34;data&#34;:[{&#34;id&#34;:1,&#34;title&#34;:&#34;Daily Standup&#34;,&#34;description&#34;:&#34;Team sync — what did we do, what will we do, blockers?&#34;,&#34;location&#34;:&#34;Conference Room A&#34;,&#34;date&#34;:&#34;2026-03-23&#34;,&#34;time&#34;:&#34;09:00&#34;,&#34;created_at&#34;:&#34;2026-03-23T10:54:15Z&#34;},{&#34;id&#34;:19,&#34;title&#34;:&#34;Create Appt TC_UI0020&#34;,&#34;description&#34;:&#34;&#34;,&#34;location&#34;:&#34;&#34;,&#34;date&#34;:&#34;2026-03-24&#34;,&#34;time&#34;:&#34;09:00&#34;,&#34;created_at&#34;:&#34;2026-03-24T22:55:55Z&#34;},{&#34;id&#34;:22,&#34;title&#34;:&#34;Create Appt TC_UI0020&#34;,&#34;description&#34;:&#34;&#34;,&#34;location&#34;:&#34;&#34;,&#34;...</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_API0010')"
+            class="passed">
+            TC_API0010 - API Create Appointment (Passed)
+        </h3>
+
+        <div id="TC_API0010" class="test-details">
+            <p><strong>Description:</strong> This test case verifies the POST /api/appointments endpoint creates a new appointment and returns a 201 status.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12354</a></p>
+            <p><strong>Pre-conditions:</strong> The API must be running and a valid API key must be available.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Send a POST request to /api/appointments with a JSON body containing title, date, time, location, and description.</td>
+                    <td>The API should respond with a status code of 201.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify that the response status code is 201.</td>
+                    <td>The response status code should be 201.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the response body contains the created appointment with an assigned ID.</td>
+                    <td>The response body should contain the new appointment object with an id field.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> A new appointment is created and the API returns 201 with the appointment object.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Create Appointment Response: {"id":79,"title":"Test Appointment","description":"Test appointment description","location":"Test Room","date":"2026-04-01","time":"10:00","created_at":"2026-03-24T23:44:56Z"}
+</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194456365</p>
+            <p><strong>End Time:</strong> 20260324194456368</p>
+            <p><strong>Time to Complete:</strong> 3</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> Requires X-API-Key header authentication.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Create Appointment Response Code: 201, Body: {&#34;id&#34;:79,&#34;title&#34;:&#34;Test Appointment&#34;,&#34;description&#34;:&#34;Test appointment description&#34;,&#34;location&#34;:&#34;Test Room&#34;,&#34;date&#34;:&#34;2026-04-01&#34;,&#34;time&#34;:&#34;10:00&#34;,&#34;created_at&#34;:&#34;2026-03-24T23:44:56Z&#34;}</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_API0011')"
+            class="passed">
+            TC_API0011 - API Update Appointment (Passed)
+        </h3>
+
+        <div id="TC_API0011" class="test-details">
+            <p><strong>Description:</strong> This test case verifies the PUT /api/appointments/{id} endpoint updates an existing appointment and returns a 200 status.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12355</a></p>
+            <p><strong>Pre-conditions:</strong> The API must be running and a valid API key must be available.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Send a POST request to /api/appointments to create an appointment and retrieve its ID.</td>
+                    <td>An appointment is created with status 201 and the response contains an id.</td>
+                </tr>
+                
+                <tr>
+                    <td>Send a PUT request to /api/appointments/{id} with updated title, date, time, location, and description.</td>
+                    <td>The API should respond with a status code of 200.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify that the response status code is 200 and the appointment reflects the updated values.</td>
+                    <td>The response status code should be 200 with the updated appointment object.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The appointment is updated and the API returns 200 with the updated appointment object.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Update Appointment Response: {"id":80,"title":"Updated Appointment","description":"Updated description","location":"Updated Room","date":"2026-04-02","time":"14:00","created_at":"2026-03-24T23:44:56Z"}
+</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194456368</p>
+            <p><strong>End Time:</strong> 20260324194456372</p>
+            <p><strong>Time to Complete:</strong> 4</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> Creates an appointment first to obtain a valid ID, then performs the update.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Create Appointment (setup) Response Code: 201, Body: {&#34;id&#34;:80,&#34;title&#34;:&#34;Appointment for Update&#34;,&#34;description&#34;:&#34;Original description&#34;,&#34;location&#34;:&#34;Original Room&#34;,&#34;date&#34;:&#34;2026-04-01&#34;,&#34;time&#34;:&#34;10:00&#34;,&#34;created_at&#34;:&#34;2026-03-24T23:44:56Z&#34;}</li>
+                    
+                        <li>Update Appointment Response Code: 200, Body: {&#34;id&#34;:80,&#34;title&#34;:&#34;Updated Appointment&#34;,&#34;description&#34;:&#34;Updated description&#34;,&#34;location&#34;:&#34;Updated Room&#34;,&#34;date&#34;:&#34;2026-04-02&#34;,&#34;time&#34;:&#34;14:00&#34;,&#34;created_at&#34;:&#34;2026-03-24T23:44:56Z&#34;}</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_API0012')"
+            class="passed">
+            TC_API0012 - API Delete Appointment (Passed)
+        </h3>
+
+        <div id="TC_API0012" class="test-details">
+            <p><strong>Description:</strong> This test case verifies the DELETE /api/appointments/{id} endpoint deletes an existing appointment and returns a 200 status.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12356</a></p>
+            <p><strong>Pre-conditions:</strong> The API must be running and a valid API key must be available.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Send a POST request to /api/appointments to create an appointment and retrieve its ID.</td>
+                    <td>An appointment is created with status 201 and the response contains an id.</td>
+                </tr>
+                
+                <tr>
+                    <td>Send a DELETE request to /api/appointments/{id} using the created appointment&#39;s ID.</td>
+                    <td>The API should respond with a status code of 200.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify that the response status code is 200 and the message confirms deletion.</td>
+                    <td>The response status code should be 200 with a success message.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The appointment is deleted and the API returns 200 with a deletion confirmation.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Delete Appointment Response: {"message":"Appointment deleted successfully"}
+</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194456372</p>
+            <p><strong>End Time:</strong> 20260324194456377</p>
+            <p><strong>Time to Complete:</strong> 5</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> Creates an appointment first to obtain a valid ID, then deletes it.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Create Appointment (setup) Response Code: 201, Body: {&#34;id&#34;:81,&#34;title&#34;:&#34;Appointment to Delete&#34;,&#34;description&#34;:&#34;This appointment will be deleted&#34;,&#34;location&#34;:&#34;Delete Room&#34;,&#34;date&#34;:&#34;2026-04-03&#34;,&#34;time&#34;:&#34;09:00&#34;,&#34;created_at&#34;:&#34;2026-03-24T23:44:56Z&#34;}</li>
+                    
+                        <li>Delete Appointment Response Code: 200, Body: {&#34;message&#34;:&#34;Appointment deleted successfully&#34;}</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+            
+        </div>
+    </div>
+
+    
+
+    <script>
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === 'none') {
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('steps-container');
+            if (!container) return;
+
+            const lines = container.innerText
+                .split('\n')
+                .map(s => s.trim())
+                .filter(Boolean);
+
+            lines.sort((a, b) => {
+                const an = Number((a.match(/^\s*(\d+)/) || [, 'Infinity'])[1]);
+                const bn = Number((b.match(/^\s*(\d+)/) || [, 'Infinity'])[1]);
+                return an - bn;
+            });
+
+            container.innerHTML = lines.map(function(s) { return s + '<br>'; }).join('');
+        });
+    </script>
+</body>
+</html>
+
+
+
+

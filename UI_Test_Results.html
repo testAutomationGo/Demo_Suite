@@ -1,0 +1,2338 @@
+
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .test-category {
+            margin-bottom: 20px;
+        }
+
+        .test-category h2 {
+            background-color: #f4f4f4;
+            padding: 10px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .test-case {
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .test-case h3 {
+            margin-top: 0;
+            cursor: pointer;
+        }
+
+        .test-details {
+            display: none;
+        }
+
+        .passed {
+            color: green;
+        }
+
+        .failed {
+            color: red;
+        }
+
+        .summary {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .not-run {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Results</h1>
+    <div class="summary">
+        <p>Total Tests: 21</p>
+        <p>Tests Ran: 21</p>
+        <p style="color: green">Tests Passed: 21</p>
+        <p style="color: red">Tests Failed: 0</p>
+        <p>Execution Date: 2026-03-24 19:44:35</p>
+        <p>Duration (seconds): 9223372036</p>
+        <p>Environment: N/A</p>
+        <div>Click on the Below Links to View The Results</div>
+    </div>
+
+    
+        
+    <div class="test-category">
+        <h2 onclick="toggleDetails('webApp')"
+            class=""
+            style="color: green">
+            webApp 
+        </h2>
+
+        <div id="webApp" style="display: none;">
+            
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0001')"
+            class="passed">
+            TC_UI0001 - Home Page Availability (Passed)
+        </h3>
+
+        <div id="TC_UI0001" class="test-details">
+            <p><strong>Description:</strong> This test case checks the availability of the home page by verifying the headline text.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12345</a></p>
+            <p><strong>Pre-conditions:</strong> </p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Navigate to the home page.</td>
+                    <td>The home page should load successfully.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify that the headline text is displayed correctly.</td>
+                    <td>The headline text should be &#39;Everything you need,&#39;.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The home page should be available and display the correct headline text.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Text Of Headline: 
+      Everything you need,
+      in one place.
+    </p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429216</p>
+            <p><strong>End Time:</strong> 20260324194431833</p>
+            <p><strong>Time to Complete:</strong> 2617</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> This test case is part of the webApp health check suite and should be executed regularly to ensure the webApp is functioning properly.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080</li>
+                    
+                        <li>Locator count for selector &#39;#hero-heading&#39;: 1</li>
+                    
+                        <li>Waited by selector: #hero-heading</li>
+                    
+                        <li>Locator count for selector &#39;#hero-heading&#39;: 1</li>
+                    
+                        <li>Get text from: #hero-heading text:</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0002')"
+            class="passed">
+            TC_UI0002 - Login (Passed)
+        </h3>
+
+        <div id="TC_UI0002" class="test-details">
+            <p><strong>Description:</strong> This test case verifies that a user can log in to the application using valid credentials and is redirected to the dashboard.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12346</a></p>
+            <p><strong>Pre-conditions:</strong> The demo application must be running at the configured web app URL.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Navigate to the login page at /login.</td>
+                    <td>The login page should load and display the login form.</td>
+                </tr>
+                
+                <tr>
+                    <td>Enter the demo email address into the email input field.</td>
+                    <td>The email field should accept the input.</td>
+                </tr>
+                
+                <tr>
+                    <td>Enter the demo password into the password input field.</td>
+                    <td>The password field should accept the input.</td>
+                </tr>
+                
+                <tr>
+                    <td>Click the Sign In button.</td>
+                    <td>The user should be redirected to the dashboard.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the dashboard is displayed with the logged-in user&#39;s email.</td>
+                    <td>The dashboard page should be visible and display the user&#39;s email address.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The user should be successfully logged in and redirected to the dashboard displaying their email address.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Logged In</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429216</p>
+            <p><strong>End Time:</strong> 20260324194433091</p>
+            <p><strong>Time to Complete:</strong> 3875</p>
+            <p><strong>Test Time Profile:</strong> veryFast</p>
+            <p><strong>Notes:</strong> This is a critical path test. Login must work correctly for all other authenticated tests to function.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080/login</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;email-input&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;email-input&#34;] with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;password-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;password-input&#34;] with text len: 9</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-submit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;login-submit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;dashboard-heading&#34;]&#39;: 0</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;dashboard-heading&#34;]</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0003')"
+            class="passed">
+            TC_UI0003 - Login With Bad Credentials (Passed)
+        </h3>
+
+        <div id="TC_UI0003" class="test-details">
+            <p><strong>Description:</strong> This test case verifies that the application displays an error message when a user attempts to log in with invalid credentials and does not redirect to the dashboard.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12347</a></p>
+            <p><strong>Pre-conditions:</strong> The demo application must be running at the configured web app URL.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Navigate to the login page at /login.</td>
+                    <td>The login page should load and display the login form.</td>
+                </tr>
+                
+                <tr>
+                    <td>Enter an invalid email address into the email input field.</td>
+                    <td>The email field should accept the input.</td>
+                </tr>
+                
+                <tr>
+                    <td>Enter an invalid password into the password input field.</td>
+                    <td>The password field should accept the input.</td>
+                </tr>
+                
+                <tr>
+                    <td>Click the Sign In button.</td>
+                    <td>The user should remain on the login page and an error alert should appear.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the error alert is displayed with an invalid credentials message.</td>
+                    <td>An error message containing &#39;Invalid email or password&#39; should be visible on the page.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The login attempt should fail and display an error message. The user should remain on the login page.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Error Message: Invalid email or password. Try demo@demoapp.com / Demo1234!</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429217</p>
+            <p><strong>End Time:</strong> 20260324194433683</p>
+            <p><strong>Time to Complete:</strong> 4466</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> This test validates that the authentication system correctly rejects invalid credentials and provides user feedback.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080/login</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-form&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;login-form&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;email-input&#34;] with text len: 15</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;password-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;password-input&#34;] with text len: 15</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-submit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;login-submit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-error&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;login-error&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-error-message&#34;]&#39;: 1</li>
+                    
+                        <li>Get text from: [data-testid=&#34;login-error-message&#34;] text: Invalid email or password. Try demo@demoapp.com / Demo1234!</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0004')"
+            class="passed">
+            TC_UI0004 - Unauthenticated Redirect (Passed)
+        </h3>
+
+        <div id="TC_UI0004" class="test-details">
+            <p><strong>Description:</strong> This test case verifies that an unauthenticated user attempting to access a protected page is redirected to the login page.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12348</a></p>
+            <p><strong>Pre-conditions:</strong> The demo application must be running at the configured web app URL. No active session should exist.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Navigate directly to the /dashboard URL without an active session.</td>
+                    <td>The application should detect the missing session and redirect the user.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the user is redirected to the login page.</td>
+                    <td>The login form should be visible, confirming the redirect to /login has occurred.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The user should be redirected to the login page when attempting to access a protected route without authentication.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Login form visible after redirect: true</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429217</p>
+            <p><strong>End Time:</strong> 20260324194432701</p>
+            <p><strong>Time to Complete:</strong> 3484</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> This test validates that route protection is working correctly and unauthenticated users cannot access protected pages.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080/dashboard</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-form&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;login-form&#34;]</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0005')"
+            class="passed">
+            TC_UI0005 - Dashboard Availability (Passed)
+        </h3>
+
+        <div id="TC_UI0005" class="test-details">
+            <p><strong>Description:</strong> This test case verifies that after a successful login the dashboard loads correctly, displaying all three feature tiles and the API info card.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12349</a></p>
+            <p><strong>Pre-conditions:</strong> The demo application must be running at the configured web app URL.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Navigate to /login and log in with valid credentials.</td>
+                    <td>The user should be redirected to the dashboard.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the Notes tile is visible on the dashboard.</td>
+                    <td>The Notes tile should be present with a count badge.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the Messages tile is visible on the dashboard.</td>
+                    <td>The Messages tile should be present with a count badge.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the Calendar tile is visible on the dashboard.</td>
+                    <td>The Calendar tile should be present with a count badge.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the API info card is visible at the bottom of the dashboard.</td>
+                    <td>The REST API info card should be present displaying API endpoint information.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The dashboard should load successfully and display all three feature tiles (Notes, Messages, Calendar) and the API info card.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> All dashboard tiles visible: true</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429216</p>
+            <p><strong>End Time:</strong> 20260324194434215</p>
+            <p><strong>Time to Complete:</strong> 4999</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> This test validates the core dashboard layout and ensures all primary navigation tiles are rendered after login.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080/login</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;email-input&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;email-input&#34;] with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;password-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;password-input&#34;] with text len: 9</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-submit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;login-submit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;dashboard-heading&#34;]&#39;: 0</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;dashboard-heading&#34;]</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0006')"
+            class="passed">
+            TC_UI0006 - Logout (Passed)
+        </h3>
+
+        <div id="TC_UI0006" class="test-details">
+            <p><strong>Description:</strong> This test case verifies that a logged-in user can successfully log out and is redirected back to the landing page.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12350</a></p>
+            <p><strong>Pre-conditions:</strong> The demo application must be running at the configured web app URL.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Navigate to /login and log in with valid credentials.</td>
+                    <td>The user should be redirected to the dashboard.</td>
+                </tr>
+                
+                <tr>
+                    <td>Click the Logout link in the main navigation bar.</td>
+                    <td>The application should clear the session and redirect the user.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the user is redirected to the landing page.</td>
+                    <td>The landing page hero heading should be visible, confirming the session has been cleared and the user is logged out.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The user should be successfully logged out and returned to the landing home page.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Landing page headline after logout: 
+      Everything you need,
+      in one place.
+    </p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429218</p>
+            <p><strong>End Time:</strong> 20260324194433553</p>
+            <p><strong>Time to Complete:</strong> 4335</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> This test validates that the logout mechanism correctly destroys the session and returns the user to the public landing page.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080/login</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;email-input&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;email-input&#34;] with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;password-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;password-input&#34;] with text len: 9</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-submit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;login-submit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;dashboard-heading&#34;]&#39;: 0</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;dashboard-heading&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;nav-logout&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;nav-logout&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;nav-logout&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;nav-logout&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;#hero-heading&#39;: 1</li>
+                    
+                        <li>Waited by selector: #hero-heading</li>
+                    
+                        <li>Locator count for selector &#39;#hero-heading&#39;: 1</li>
+                    
+                        <li>Get text from: #hero-heading text:</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0007')"
+            class="passed">
+            TC_UI0007 - Navigate To Notes Page (Passed)
+        </h3>
+
+        <div id="TC_UI0007" class="test-details">
+            <p><strong>Description:</strong> This test case verifies that a logged-in user can navigate to the Notes page by clicking the Notes tile on the dashboard and that the page loads correctly.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12351</a></p>
+            <p><strong>Pre-conditions:</strong> The demo application must be running. User must be able to log in.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Log in with valid credentials and land on the dashboard.</td>
+                    <td>The dashboard should be displayed with all feature tiles visible.</td>
+                </tr>
+                
+                <tr>
+                    <td>Click the Notes tile on the dashboard.</td>
+                    <td>The browser should navigate to the /notes page.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the Notes page title is displayed.</td>
+                    <td>The page heading &#39;My Notes&#39; should be visible, confirming successful navigation.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> Clicking the Notes tile navigates to the Notes page and the &#39;My Notes&#39; heading is displayed.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Notes Page Title: My Notes</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429218</p>
+            <p><strong>End Time:</strong> 20260324194434582</p>
+            <p><strong>Time to Complete:</strong> 5364</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> This test validates the dashboard tile navigation to the Notes section.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080/login</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;email-input&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;email-input&#34;] with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;password-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;password-input&#34;] with text len: 9</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-submit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;login-submit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;dashboard-heading&#34;]&#39;: 0</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;dashboard-heading&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;tile-notes&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;tile-notes&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;notes-page&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;notes-page&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;notes-page-title&#34;]&#39;: 1</li>
+                    
+                        <li>Get text from: [data-testid=&#34;notes-page-title&#34;] text: My Notes</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0008')"
+            class="passed">
+            TC_UI0008 - Create Note (Passed)
+        </h3>
+
+        <div id="TC_UI0008" class="test-details">
+            <p><strong>Description:</strong> This test case verifies that a logged-in user can create a new note by filling in the title and content fields and submitting the form, and that the new note appears in the list without a page reload.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12352</a></p>
+            <p><strong>Pre-conditions:</strong> The demo application must be running. User must be able to log in.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Log in and navigate to the /notes page.</td>
+                    <td>The Notes page should load with the create note form visible.</td>
+                </tr>
+                
+                <tr>
+                    <td>Enter a title into the note title input field.</td>
+                    <td>The title field should accept the input.</td>
+                </tr>
+                
+                <tr>
+                    <td>Enter content into the note content textarea.</td>
+                    <td>The content field should accept the input.</td>
+                </tr>
+                
+                <tr>
+                    <td>Click the Add Note button.</td>
+                    <td>The form should submit via HTMX and the new note should appear at the top of the notes list.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the new note title appears in the notes list.</td>
+                    <td>The notes list should contain the newly created note title without a full page reload.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> A new note is created and appears at the top of the notes list via HTMX partial update.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Created note title found in page: UI Test Note TC_UI0008</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429218</p>
+            <p><strong>End Time:</strong> 20260324194434691</p>
+            <p><strong>Time to Complete:</strong> 5473</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> This test validates the HTMX-powered note creation flow. The note should appear without a full page reload.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080/login</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;email-input&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;email-input&#34;] with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;password-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;password-input&#34;] with text len: 9</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-submit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;login-submit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;dashboard-heading&#34;]&#39;: 0</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;dashboard-heading&#34;]</li>
+                    
+                        <li>Navigated to: http://localhost:8080/notes</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;create-note-form&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;create-note-form&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;note-title-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;note-title-input&#34;] with text len: 22</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;note-content-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;note-content-input&#34;] with text len: 36</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;create-note-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;create-note-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;note-item&#34;]&#39;: 67</li>
+                    
+                        <li>Warning: 67 elements matched selector &#39;[data-testid=&#34;note-item&#34;]&#39;, using first match.</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;note-item&#34;]</li>
+                    
+                        <li>Shortened source returned: &lt;!DOCTYPE html&gt;</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0009')"
+            class="passed">
+            TC_UI0009 - Edit Note (Passed)
+        </h3>
+
+        <div id="TC_UI0009" class="test-details">
+            <p><strong>Description:</strong> This test case verifies that a logged-in user can edit an existing note&#39;s title, save the changes, and see the updated title reflected in the notes list.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12353</a></p>
+            <p><strong>Pre-conditions:</strong> The demo application must be running. User must be able to log in.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Log in and navigate to the /notes page. Create a test note.</td>
+                    <td>The new note should appear at the top of the notes list.</td>
+                </tr>
+                
+                <tr>
+                    <td>Click the Edit button on the first note in the list.</td>
+                    <td>The note item should be replaced inline with an edit form pre-filled with the current title and content.</td>
+                </tr>
+                
+                <tr>
+                    <td>Clear the title field and enter a new updated title.</td>
+                    <td>The title input should accept the new value.</td>
+                </tr>
+                
+                <tr>
+                    <td>Click the Save button.</td>
+                    <td>The edit form should be replaced by the updated note item via HTMX.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the updated note title is now shown in the list.</td>
+                    <td>The notes list should display the new title in place of the original.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The note title is updated and the new title is displayed in the notes list after saving.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Updated note title found in page: Edited TC_UI0009</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429218</p>
+            <p><strong>End Time:</strong> 20260324194434371</p>
+            <p><strong>Time to Complete:</strong> 5153</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> This test validates the inline HTMX edit flow. The edit form swaps in and then swaps back to the note item on save.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080/login</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;email-input&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;email-input&#34;] with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;password-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;password-input&#34;] with text len: 9</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-submit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;login-submit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;dashboard-heading&#34;]&#39;: 0</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;dashboard-heading&#34;]</li>
+                    
+                        <li>Navigated to: http://localhost:8080/notes</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;create-note-form&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;create-note-form&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;note-title-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;note-title-input&#34;] with text len: 19</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;note-content-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;note-content-input&#34;] with text len: 20</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;create-note-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;create-note-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;notes-list&#34;] [data-testid=&#34;note-item&#34;]:first-child [data-testid=&#34;note-edit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;notes-list&#34;] [data-testid=&#34;note-item&#34;]:first-child [data-testid=&#34;note-edit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;notes-list&#34;] [data-testid=&#34;note-item&#34;]:first-child [data-testid=&#34;note-edit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;notes-list&#34;] [data-testid=&#34;note-item&#34;]:first-child [data-testid=&#34;note-edit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;note-edit-form&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;note-edit-form&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;edit-note-title-input&#34;]&#39;: 1</li>
+                    
+                        <li>Cleared text box: [data-testid=&#34;edit-note-title-input&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;edit-note-title-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;edit-note-title-input&#34;] with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;note-save-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;note-save-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;note-item&#34;]&#39;: 66</li>
+                    
+                        <li>Warning: 66 elements matched selector &#39;[data-testid=&#34;note-item&#34;]&#39;, using first match.</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;note-item&#34;]</li>
+                    
+                        <li>Shortened source returned: &lt;!DOCTYPE html&gt;</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0010')"
+            class="passed">
+            TC_UI0010 - Delete Note (Passed)
+        </h3>
+
+        <div id="TC_UI0010" class="test-details">
+            <p><strong>Description:</strong> This test case verifies that a logged-in user can delete a note by clicking the Delete button, confirming the browser dialog, and that the note is removed from the list.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12354</a></p>
+            <p><strong>Pre-conditions:</strong> The demo application must be running. User must be able to log in.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Log in and navigate to the /notes page. Create a test note.</td>
+                    <td>The new note should appear at the top of the notes list.</td>
+                </tr>
+                
+                <tr>
+                    <td>Click the Delete button on the first note in the list.</td>
+                    <td>A browser confirmation dialog should appear asking to confirm the deletion.</td>
+                </tr>
+                
+                <tr>
+                    <td>Accept the confirmation dialog.</td>
+                    <td>The dialog should be dismissed and the delete request should be sent.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the deleted note is no longer present in the notes list.</td>
+                    <td>The note item should be removed from the DOM via HTMX swap delete, and the title should no longer appear on the page.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The note is deleted and removed from the notes list. The note title no longer appears in the page source.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Deleted note title absent from page: Delete Test TC_UI0010_20260324194433337</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429217</p>
+            <p><strong>End Time:</strong> 20260324194433737</p>
+            <p><strong>Time to Complete:</strong> 4520</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> This test validates the HTMX delete flow. The browser native confirm() dialog must be accepted. HTMX removes the element via hx-swap=&#39;delete&#39;.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080/login</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;email-input&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;email-input&#34;] with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;password-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;password-input&#34;] with text len: 9</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-submit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;login-submit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;dashboard-heading&#34;]&#39;: 0</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;dashboard-heading&#34;]</li>
+                    
+                        <li>Navigated to: http://localhost:8080/notes</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;create-note-form&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;create-note-form&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;note-title-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;note-title-input&#34;] with text len: 39</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;note-content-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;note-content-input&#34;] with text len: 21</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;create-note-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;create-note-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;notes-list&#34;] [data-testid=&#34;note-item&#34;]:first-child [data-testid=&#34;note-delete-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;notes-list&#34;] [data-testid=&#34;note-item&#34;]:first-child [data-testid=&#34;note-delete-btn&#34;]</li>
+                    
+                        <li>Console message: Prompt called with: undefined Default text: undefined</li>
+                    
+                        <li>Confirmed JS pop-up window</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;notes-list&#34;] [data-testid=&#34;note-item&#34;]:first-child [data-testid=&#34;note-delete-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Console message: Confirm called with: Delete this note? This cannot be undone.</li>
+                    
+                        <li>Console message: Auto-confirming the dialog.</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;notes-list&#34;] [data-testid=&#34;note-item&#34;]:first-child [data-testid=&#34;note-delete-btn&#34;]</li>
+                    
+                        <li>Waited until hidden by selector: text=Delete Test TC_UI0010_20260324194433337</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0011')"
+            class="passed">
+            TC_UI0011 - Navigate To Messages Page (Passed)
+        </h3>
+
+        <div id="TC_UI0011" class="test-details">
+            <p><strong>Description:</strong> This test case verifies that a logged-in user can navigate to the Messages page by clicking the Messages tile on the dashboard and that the page loads correctly.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12355</a></p>
+            <p><strong>Pre-conditions:</strong> The demo application must be running. User must be able to log in.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Log in with valid credentials and land on the dashboard.</td>
+                    <td>The dashboard should be displayed with all feature tiles visible.</td>
+                </tr>
+                
+                <tr>
+                    <td>Click the Messages tile on the dashboard.</td>
+                    <td>The browser should navigate to the /messages page.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the Messages page title is displayed.</td>
+                    <td>The page heading containing &#39;Messages&#39; should be visible, confirming successful navigation.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> Clicking the Messages tile navigates to the Messages page and the page title containing &#39;Messages&#39; is displayed.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Messages Page Title: Messages</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429217</p>
+            <p><strong>End Time:</strong> 20260324194434341</p>
+            <p><strong>Time to Complete:</strong> 5124</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> This test validates the dashboard tile navigation to the Messages section.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080/login</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;email-input&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;email-input&#34;] with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;password-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;password-input&#34;] with text len: 9</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-submit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;login-submit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;dashboard-heading&#34;]&#39;: 0</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;dashboard-heading&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;tile-messages&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;tile-messages&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;messages-page&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;messages-page&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;messages-page-title&#34;]&#39;: 1</li>
+                    
+                        <li>Get text from: [data-testid=&#34;messages-page-title&#34;] text: Messages</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0012')"
+            class="passed">
+            TC_UI0012 - Messages Inbox Tab (Passed)
+        </h3>
+
+        <div id="TC_UI0012" class="test-details">
+            <p><strong>Description:</strong> This test case verifies that a logged-in user can click the Inbox tab on the Messages page and that the messages container is displayed.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12356</a></p>
+            <p><strong>Pre-conditions:</strong> The demo application must be running. User must be able to log in.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Log in and navigate to the /messages page.</td>
+                    <td>The Messages page should load with the inbox and sent tabs visible.</td>
+                </tr>
+                
+                <tr>
+                    <td>Click the Inbox tab.</td>
+                    <td>The inbox tab should become active and the messages container should be visible.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the messages container is visible.</td>
+                    <td>The messages container element should be present and visible on the page.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> Clicking the Inbox tab shows the messages container for the inbox view.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Messages container visible after inbox tab click: true</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429217</p>
+            <p><strong>End Time:</strong> 20260324194434561</p>
+            <p><strong>Time to Complete:</strong> 5344</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> This test validates the inbox tab interaction on the Messages page.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080/login</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;email-input&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;email-input&#34;] with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;password-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;password-input&#34;] with text len: 9</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-submit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;login-submit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;dashboard-heading&#34;]&#39;: 0</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;dashboard-heading&#34;]</li>
+                    
+                        <li>Navigated to: http://localhost:8080/messages</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;messages-page&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;messages-page&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;inbox-tab&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;inbox-tab&#34;]</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0013')"
+            class="passed">
+            TC_UI0013 - Messages Sent Tab (Passed)
+        </h3>
+
+        <div id="TC_UI0013" class="test-details">
+            <p><strong>Description:</strong> This test case verifies that a logged-in user can click the Sent tab on the Messages page and that the messages container is displayed showing sent messages.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12357</a></p>
+            <p><strong>Pre-conditions:</strong> The demo application must be running. User must be able to log in.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Log in and navigate to the /messages page.</td>
+                    <td>The Messages page should load with the inbox and sent tabs visible.</td>
+                </tr>
+                
+                <tr>
+                    <td>Click the Sent tab.</td>
+                    <td>The sent tab should become active and the messages container should be visible.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the messages container is visible.</td>
+                    <td>The messages container element should be present and visible on the page.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> Clicking the Sent tab shows the messages container for the sent messages view.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Messages container visible after sent tab click: true</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429216</p>
+            <p><strong>End Time:</strong> 20260324194434538</p>
+            <p><strong>Time to Complete:</strong> 5322</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> This test validates the sent tab interaction on the Messages page.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080/login</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;email-input&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;email-input&#34;] with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;password-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;password-input&#34;] with text len: 9</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-submit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;login-submit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;dashboard-heading&#34;]&#39;: 0</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;dashboard-heading&#34;]</li>
+                    
+                        <li>Navigated to: http://localhost:8080/messages</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;messages-page&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;messages-page&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;sent-tab&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;sent-tab&#34;]</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0014')"
+            class="passed">
+            TC_UI0014 - Read Message (Passed)
+        </h3>
+
+        <div id="TC_UI0014" class="test-details">
+            <p><strong>Description:</strong> This test case verifies that a logged-in user can open a message to read its full detail view, showing the subject and body content.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12358</a></p>
+            <p><strong>Pre-conditions:</strong> The demo application must be running. User must be able to log in.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Log in and navigate to the /messages page. Compose and send a test message to self.</td>
+                    <td>The message is sent successfully.</td>
+                </tr>
+                
+                <tr>
+                    <td>Click the Sent tab to view sent messages.</td>
+                    <td>The sent messages list should display the newly sent message.</td>
+                </tr>
+                
+                <tr>
+                    <td>Click the first message row.</td>
+                    <td>The message detail view should appear showing the full message.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the message detail subject matches the sent subject.</td>
+                    <td>The detail subject element should contain the original subject text.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> Clicking a message row opens the message detail view with the correct subject displayed.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Message detail subject: 
+        Read Test TC_UI0014
+      </p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429218</p>
+            <p><strong>End Time:</strong> 20260324194435063</p>
+            <p><strong>Time to Complete:</strong> 5845</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> This test sends a message to self first to ensure a message exists, then opens it via the sent tab to verify the detail view.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080/login</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;email-input&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;email-input&#34;] with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;password-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;password-input&#34;] with text len: 9</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-submit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;login-submit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;dashboard-heading&#34;]&#39;: 0</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;dashboard-heading&#34;]</li>
+                    
+                        <li>Navigated to: http://localhost:8080/messages</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;messages-page&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;messages-page&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;compose-toggle&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;compose-toggle&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;compose-form&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;compose-form&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;#msg-to&#39;: 1</li>
+                    
+                        <li>Filled text box: #msg-to with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;msg-subject-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;msg-subject-input&#34;] with text len: 19</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;msg-body-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;msg-body-input&#34;] with text len: 36</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;send-message-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;send-message-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;sent-tab&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;sent-tab&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;messages-container&#34;] [data-testid=&#34;message-item&#34;]:first-child&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;messages-container&#34;] [data-testid=&#34;message-item&#34;]:first-child</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;messages-container&#34;] [data-testid=&#34;message-item&#34;]:first-child [data-testid=&#34;message-row-click&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;messages-container&#34;] [data-testid=&#34;message-item&#34;]:first-child [data-testid=&#34;message-row-click&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;message-detail-content&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;message-detail-content&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;detail-subject&#34;]&#39;: 1</li>
+                    
+                        <li>Get text from: [data-testid=&#34;detail-subject&#34;] text:</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0015')"
+            class="passed">
+            TC_UI0015 - Send Message (Passed)
+        </h3>
+
+        <div id="TC_UI0015" class="test-details">
+            <p><strong>Description:</strong> This test case verifies that a logged-in user can compose and send a message using the compose form, and that the sent message appears in the Sent tab.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12359</a></p>
+            <p><strong>Pre-conditions:</strong> The demo application must be running. User must be able to log in.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Log in and navigate to the /messages page.</td>
+                    <td>The Messages page should load with the compose toggle visible.</td>
+                </tr>
+                
+                <tr>
+                    <td>Click the Compose toggle to reveal the compose form.</td>
+                    <td>The compose form should appear with To, Subject, and Body fields.</td>
+                </tr>
+                
+                <tr>
+                    <td>Fill in the To, Subject, and Body fields and click Send.</td>
+                    <td>The message should be submitted and the compose form should close.</td>
+                </tr>
+                
+                <tr>
+                    <td>Click the Sent tab and verify the message subject appears.</td>
+                    <td>The sent messages list should contain the newly sent message subject.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The composed message is sent and its subject appears in the Sent tab message list.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Sent message subject found in page: Send Test TC_UI0015</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429217</p>
+            <p><strong>End Time:</strong> 20260324194435175</p>
+            <p><strong>Time to Complete:</strong> 5958</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> This test validates the full compose and send flow. The message is sent to self (same user email) so it appears in the sent list.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080/login</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;email-input&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;email-input&#34;] with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;password-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;password-input&#34;] with text len: 9</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-submit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;login-submit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;dashboard-heading&#34;]&#39;: 0</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;dashboard-heading&#34;]</li>
+                    
+                        <li>Navigated to: http://localhost:8080/messages</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;messages-page&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;messages-page&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;compose-toggle&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;compose-toggle&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;compose-form&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;compose-form&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;#msg-to&#39;: 1</li>
+                    
+                        <li>Filled text box: #msg-to with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;msg-subject-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;msg-subject-input&#34;] with text len: 19</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;msg-body-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;msg-body-input&#34;] with text len: 36</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;send-message-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;send-message-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;sent-tab&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;sent-tab&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;message-item&#34;]&#39;: 87</li>
+                    
+                        <li>Warning: 87 elements matched selector &#39;[data-testid=&#34;message-item&#34;]&#39;, using first match.</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;message-item&#34;]</li>
+                    
+                        <li>Shortened source returned: &lt;!DOCTYPE html&gt;</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0016')"
+            class="passed">
+            TC_UI0016 - Delete Message (Passed)
+        </h3>
+
+        <div id="TC_UI0016" class="test-details">
+            <p><strong>Description:</strong> This test case verifies that a logged-in user can delete a message from the Sent tab by clicking the Delete button, confirming the dialog, and that the message is removed from the list.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12360</a></p>
+            <p><strong>Pre-conditions:</strong> The demo application must be running. User must be able to log in.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Log in and navigate to the /messages page. Compose and send a test message to self.</td>
+                    <td>The message is sent successfully.</td>
+                </tr>
+                
+                <tr>
+                    <td>Click the Sent tab to view sent messages.</td>
+                    <td>The sent messages list should display the newly sent message.</td>
+                </tr>
+                
+                <tr>
+                    <td>Click the Delete button on the first message in the sent list.</td>
+                    <td>A browser confirmation dialog should appear asking to confirm the deletion.</td>
+                </tr>
+                
+                <tr>
+                    <td>Accept the confirmation dialog.</td>
+                    <td>The dialog should be dismissed and the delete request should be sent.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the deleted message is no longer present in the sent list.</td>
+                    <td>The message row should be removed from the DOM and the subject should no longer appear on the page.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The message is deleted and removed from the sent list. The message subject no longer appears in the page source.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Deleted message element #msg-132 removed from DOM</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429217</p>
+            <p><strong>End Time:</strong> 20260324194434350</p>
+            <p><strong>Time to Complete:</strong> 5133</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> This test sends a message first to ensure something exists to delete. The browser confirm() dialog must be accepted. Uses the same HTMX delete pattern as the notes tests.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080/login</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;email-input&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;email-input&#34;] with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;password-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;password-input&#34;] with text len: 9</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-submit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;login-submit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;dashboard-heading&#34;]&#39;: 0</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;dashboard-heading&#34;]</li>
+                    
+                        <li>Navigated to: http://localhost:8080/messages</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;messages-page&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;messages-page&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;compose-toggle&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;compose-toggle&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;compose-form&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;compose-form&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;#msg-to&#39;: 1</li>
+                    
+                        <li>Filled text box: #msg-to with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;msg-subject-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;msg-subject-input&#34;] with text len: 21</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;msg-body-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;msg-body-input&#34;] with text len: 36</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;send-message-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;send-message-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;sent-tab&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;sent-tab&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;messages-container&#34;] [data-testid=&#34;message-item&#34;]:first-child [data-testid=&#34;message-delete-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;messages-container&#34;] [data-testid=&#34;message-item&#34;]:first-child [data-testid=&#34;message-delete-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;messages-container&#34;] [data-testid=&#34;message-item&#34;]:first-child&#39;: 1</li>
+                    
+                        <li>Get attribute from: [data-testid=&#34;messages-container&#34;] [data-testid=&#34;message-item&#34;]:first-child attribute: data-message-id value: 132</li>
+                    
+                        <li>Overrode window.confirm to auto-accept</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;messages-container&#34;] [data-testid=&#34;message-item&#34;]:first-child [data-testid=&#34;message-delete-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;messages-container&#34;] [data-testid=&#34;message-item&#34;]:first-child [data-testid=&#34;message-delete-btn&#34;]</li>
+                    
+                        <li>Locator not visible initially: #msg-132</li>
+                    
+                        <li>Locator count for &#39;#msg-132&#39;: 0</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0017')"
+            class="passed">
+            TC_UI0017 - Navigate To Calendar Page (Passed)
+        </h3>
+
+        <div id="TC_UI0017" class="test-details">
+            <p><strong>Description:</strong> This test case verifies that a logged-in user can navigate to the Calendar page by clicking the Calendar tile on the dashboard and that the page loads correctly.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12361</a></p>
+            <p><strong>Pre-conditions:</strong> The demo application must be running. User must be able to log in.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Log in with valid credentials and land on the dashboard.</td>
+                    <td>The dashboard should be displayed with all feature tiles visible.</td>
+                </tr>
+                
+                <tr>
+                    <td>Click the Calendar tile on the dashboard.</td>
+                    <td>The browser should navigate to the /calendar page.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the Calendar page title is displayed.</td>
+                    <td>The page heading containing &#39;Calendar&#39; should be visible, confirming successful navigation.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> Clicking the Calendar tile navigates to the Calendar page and the page title containing &#39;Calendar&#39; is displayed.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Calendar Page Title: Calendar</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429216</p>
+            <p><strong>End Time:</strong> 20260324194433625</p>
+            <p><strong>Time to Complete:</strong> 4409</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> This test validates the dashboard tile navigation to the Calendar section.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080/login</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;email-input&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;email-input&#34;] with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;password-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;password-input&#34;] with text len: 9</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-submit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;login-submit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;dashboard-heading&#34;]&#39;: 0</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;dashboard-heading&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;tile-calendar&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;tile-calendar&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;calendar-page&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;calendar-page&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;calendar-page-title&#34;]&#39;: 1</li>
+                    
+                        <li>Get text from: [data-testid=&#34;calendar-page-title&#34;] text: Calendar</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0018')"
+            class="passed">
+            TC_UI0018 - Calendar Displays Current Month (Passed)
+        </h3>
+
+        <div id="TC_UI0018" class="test-details">
+            <p><strong>Description:</strong> This test case verifies that when a logged-in user navigates to the Calendar page, the calendar displays the current month and year.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12362</a></p>
+            <p><strong>Pre-conditions:</strong> The demo application must be running. User must be able to log in.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Log in with valid credentials and navigate directly to /calendar.</td>
+                    <td>The calendar page should load successfully.</td>
+                </tr>
+                
+                <tr>
+                    <td>Read the data-month attribute from the calendar view container.</td>
+                    <td>The data-month attribute should match the current month in YYYY-MM format.</td>
+                </tr>
+                
+                <tr>
+                    <td>Compare the calendar&#39;s data-month value against the current date.</td>
+                    <td>The values should match, confirming the calendar defaults to the current month.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The calendar page loads and the calendar-view data-month attribute matches the current month in YYYY-MM format.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Calendar data-month: 2026-03 expected: 2026-03</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429218</p>
+            <p><strong>End Time:</strong> 20260324194434523</p>
+            <p><strong>Time to Complete:</strong> 5305</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> Uses the data-month attribute on the calendar-view element for reliable comparison rather than parsing month name text.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080/login</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;email-input&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;email-input&#34;] with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;password-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;password-input&#34;] with text len: 9</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-submit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;login-submit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;dashboard-heading&#34;]&#39;: 0</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;dashboard-heading&#34;]</li>
+                    
+                        <li>Navigated to: http://localhost:8080/calendar</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;calendar-view&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;calendar-view&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;calendar-view&#34;]&#39;: 1</li>
+                    
+                        <li>Get attribute from: [data-testid=&#34;calendar-view&#34;] attribute: data-month value: 2026-03</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0019')"
+            class="passed">
+            TC_UI0019 - Calendar Previous Month Navigation (Passed)
+        </h3>
+
+        <div id="TC_UI0019" class="test-details">
+            <p><strong>Description:</strong> This test case verifies that clicking the Previous Month button navigates the calendar to the correct preceding month via HTMX outerHTML swap.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12363</a></p>
+            <p><strong>Pre-conditions:</strong> The demo application must be running. User must be able to log in.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Log in and navigate to /calendar. Wait for the calendar view to load.</td>
+                    <td>The calendar page should display the current month.</td>
+                </tr>
+                
+                <tr>
+                    <td>Read the data-month attribute from the Previous Month button to determine the expected destination month.</td>
+                    <td>The data-month attribute should contain the preceding month in YYYY-MM format.</td>
+                </tr>
+                
+                <tr>
+                    <td>Click the Previous Month button.</td>
+                    <td>An HTMX request should be triggered and the calendar-view should be replaced with the previous month.</td>
+                </tr>
+                
+                <tr>
+                    <td>Wait for a calendar-view element with data-month matching the expected previous month to appear.</td>
+                    <td>The calendar-view container should update to show the previous month.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the calendar month title text is non-empty.</td>
+                    <td>The month title should display the previous month name and year.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> Clicking the Previous Month button navigates the calendar to the preceding month and the calendar-view data-month attribute reflects the new month.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Previous month title: 
+        February 2026
+      </p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429217</p>
+            <p><strong>End Time:</strong> 20260324194434656</p>
+            <p><strong>Time to Complete:</strong> 5439</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> Uses the data-month attribute on prev-month-btn as the expected value and waits for calendar-view with that exact data-month to confirm navigation. Avoids fragile month name string parsing.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080/login</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;email-input&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;email-input&#34;] with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;password-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;password-input&#34;] with text len: 9</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-submit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;login-submit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;dashboard-heading&#34;]&#39;: 0</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;dashboard-heading&#34;]</li>
+                    
+                        <li>Navigated to: http://localhost:8080/calendar</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;calendar-view&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;calendar-view&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;prev-month-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Get attribute from: [data-testid=&#34;prev-month-btn&#34;] attribute: data-month value: 2026-02</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;prev-month-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;prev-month-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;calendar-view&#34;][data-month=&#34;2026-02&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;calendar-view&#34;][data-month=&#34;2026-02&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;calendar-month-title&#34;]&#39;: 1</li>
+                    
+                        <li>Get text from: [data-testid=&#34;calendar-month-title&#34;] text:</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0020')"
+            class="passed">
+            TC_UI0020 - Create Appointment (Passed)
+        </h3>
+
+        <div id="TC_UI0020" class="test-details">
+            <p><strong>Description:</strong> This test case verifies that a logged-in user can create a new calendar appointment by filling in the appointment form and that the appointment chip appears on the calendar grid.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12364</a></p>
+            <p><strong>Pre-conditions:</strong> The demo application must be running. User must be able to log in.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Log in and navigate to /calendar. Wait for the add appointment form to load.</td>
+                    <td>The add appointment panel and form should be visible.</td>
+                </tr>
+                
+                <tr>
+                    <td>Fill in the appointment title, date (today&#39;s date), and time fields.</td>
+                    <td>The form fields should accept input.</td>
+                </tr>
+                
+                <tr>
+                    <td>Click the Save Appointment button.</td>
+                    <td>An HTMX POST request should be sent and the calendar-view should reload via outerHTML swap.</td>
+                </tr>
+                
+                <tr>
+                    <td>Wait for an appointment chip to appear on the calendar grid.</td>
+                    <td>At least one appointment chip should be visible on the calendar.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the page source contains the appointment title.</td>
+                    <td>The created appointment title should appear in the page source, confirming it was saved and rendered.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The appointment is created and an appointment chip containing the title appears on the calendar for today&#39;s date.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Created appointment title found in page: Create Appt TC_UI0020</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429217</p>
+            <p><strong>End Time:</strong> 20260324194434673</p>
+            <p><strong>Time to Complete:</strong> 5456</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> The appointment date is set dynamically to today&#39;s date using time.Now(). The calendar reloads via HTMX outerHTML swap after form submission. Validates via page source check.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080/login</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;email-input&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;email-input&#34;] with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;password-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;password-input&#34;] with text len: 9</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-submit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;login-submit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;dashboard-heading&#34;]&#39;: 0</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;dashboard-heading&#34;]</li>
+                    
+                        <li>Navigated to: http://localhost:8080/calendar</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;add-appointment-form&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;add-appointment-form&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;appt-title-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;appt-title-input&#34;] with text len: 21</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;appt-date-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;appt-date-input&#34;] with text len: 10</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;appt-time-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;appt-time-input&#34;] with text len: 5</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;save-appointment-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;save-appointment-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;appointment-chip&#34;]&#39;: 31</li>
+                    
+                        <li>Warning: 31 elements matched selector &#39;[data-testid=&#34;appointment-chip&#34;]&#39;, using first match.</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;appointment-chip&#34;]</li>
+                    
+                        <li>Shortened source returned: &lt;!DOCTYPE html&gt;</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+                    
+    <div class="test-case">
+        <h3 onclick="toggleDetails('TC_UI0021')"
+            class="passed">
+            TC_UI0021 - Delete Appointment (Passed)
+        </h3>
+
+        <div id="TC_UI0021" class="test-details">
+            <p><strong>Description:</strong> This test case verifies that a logged-in user can delete a calendar appointment by hovering over the chip to reveal the delete button, accepting the confirmation dialog, and confirming the chip is removed from the DOM.</p>
+            <p><strong>Description:</strong> <a href="" target="_blank">12365</a></p>
+            <p><strong>Pre-conditions:</strong> The demo application must be running. User must be able to log in.</p>
+
+            <table border="1" cellpadding="4" cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                <tr style="background-color: #ddd;">
+                    <th>Action</th>
+                    <th>Expected Result</th>
+                </tr>
+                
+                <tr>
+                    <td>Log in and navigate to /calendar. Create a new appointment with a unique timestamped title.</td>
+                    <td>The appointment chip should appear on the calendar after the HTMX outerHTML swap.</td>
+                </tr>
+                
+                <tr>
+                    <td>Locate the appointment chip using a selector matching the unique title prefix on the chip content&#39;s title attribute.</td>
+                    <td>The chip should be found and its data-appointment-id should be readable.</td>
+                </tr>
+                
+                <tr>
+                    <td>Override window.confirm to auto-accept, then click the delete button on the specific appointment chip.</td>
+                    <td>The HTMX delete request should be sent and the calendar-view should reload.</td>
+                </tr>
+                
+                <tr>
+                    <td>Wait until the appointment chip element (#appt-chip-{ID}) is no longer present in the DOM.</td>
+                    <td>The chip element should be gone from the DOM.</td>
+                </tr>
+                
+                <tr>
+                    <td>Verify the locator count for the chip element is 0.</td>
+                    <td>The appointment chip should not exist in the DOM, confirming successful deletion.</td>
+                </tr>
+                
+            </table>
+
+            <p><strong>Expected Outcome:</strong> The appointment is deleted and its chip element is removed from the calendar DOM.</p>
+            <p><strong>Test Data:</strong> No Test Data</p>
+            <p><strong>Actual Output:</strong> Deleted appointment #appt-chip-78 removed from DOM</p>
+
+            
+
+            <p><strong>Retry Count:</strong> 0</p>
+            <p><strong>Date Executed:</strong> 2026-03-24</p>
+            <p><strong>Start Time:</strong> 20260324194429216</p>
+            <p><strong>End Time:</strong> 20260324194434850</p>
+            <p><strong>Time to Complete:</strong> 5634</p>
+            <p><strong>Test Time Profile:</strong> default</p>
+            <p><strong>Notes:</strong> Uses a timestamped title to uniquely identify the created appointment. Finds the chip via CSS attribute selector [title^=&#39;...&#39;] to avoid selecting wrong chips. Uses AcceptNextConfirmDialog (window.confirm override) to avoid goroutine race with hx-confirm. Validates deletion via WaitUntilGone and GetLocatorCount on the specific #appt-chip-{ID} element.</p>
+
+            <p><strong>Log Entries:</strong></p>
+            
+                <ul>
+                    
+                        <li>Navigated to: http://localhost:8080/login</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;email-input&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;email-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;email-input&#34;] with text len: 16</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;password-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;password-input&#34;] with text len: 9</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;login-submit-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;login-submit-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;dashboard-heading&#34;]&#39;: 0</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;dashboard-heading&#34;]</li>
+                    
+                        <li>Navigated to: http://localhost:8080/calendar</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;add-appointment-form&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;add-appointment-form&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;appt-title-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;appt-title-input&#34;] with text len: 39</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;appt-date-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;appt-date-input&#34;] with text len: 10</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;appt-time-input&#34;]&#39;: 1</li>
+                    
+                        <li>Filled text box: [data-testid=&#34;appt-time-input&#34;] with text len: 5</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;save-appointment-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: [data-testid=&#34;save-appointment-btn&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;appointment-chip-content&#34;][title^=&#34;Delete Appt TC_UI0021_20260324194434296&#34;]&#39;: 1</li>
+                    
+                        <li>Waited by selector: [data-testid=&#34;appointment-chip-content&#34;][title^=&#34;Delete Appt TC_UI0021_20260324194434296&#34;]</li>
+                    
+                        <li>Locator count for selector &#39;[data-testid=&#34;appointment-chip-content&#34;][title^=&#34;Delete Appt TC_UI0021_20260324194434296&#34;]&#39;: 1</li>
+                    
+                        <li>Get attribute from: [data-testid=&#34;appointment-chip-content&#34;][title^=&#34;Delete Appt TC_UI0021_20260324194434296&#34;] attribute: data-appointment-id value: 78</li>
+                    
+                        <li>Overrode window.confirm to auto-accept</li>
+                    
+                        <li>Locator count for selector &#39;#appt-chip-78 [data-testid=&#34;appointment-delete-btn&#34;]&#39;: 1</li>
+                    
+                        <li>Clicked on selector: #appt-chip-78 [data-testid=&#34;appointment-delete-btn&#34;]</li>
+                    
+                        <li>Locator not visible initially: #appt-chip-78</li>
+                    
+                        <li>Locator count for &#39;#appt-chip-78&#39;: 0</li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+                
+            
+        </div>
+    </div>
+
+    
+
+    <script>
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === 'none') {
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('steps-container');
+            if (!container) return;
+
+            const lines = container.innerText
+                .split('\n')
+                .map(s => s.trim())
+                .filter(Boolean);
+
+            lines.sort((a, b) => {
+                const an = Number((a.match(/^\s*(\d+)/) || [, 'Infinity'])[1]);
+                const bn = Number((b.match(/^\s*(\d+)/) || [, 'Infinity'])[1]);
+                return an - bn;
+            });
+
+            container.innerHTML = lines.map(function(s) { return s + '<br>'; }).join('');
+        });
+    </script>
+</body>
+</html>
+
+
+
+
