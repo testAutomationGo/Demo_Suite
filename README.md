@@ -7,8 +7,6 @@ A full demo of the framework can be seen here:
 https://youtu.be/xq2QtYULuvA
 
 ---
-Right Here, Right Now!
-
 https://github.com/user-attachments/assets/9c3ae9c2-e7b7-4eae-af67-e744bf1cf682
 
 
