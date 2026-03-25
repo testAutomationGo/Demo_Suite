@@ -42,7 +42,7 @@ The goal is to show an alternative to slower traditional automation stacks.
 
 ---
 
-## 🛠 Technologies Used
+##  Technologies Used
 
 - Go (Golang)
 - Custom Test Runner
